@@ -1,0 +1,35 @@
+.table-scroll {
+  height: 335px !important;
+  overflow-x: auto;
+  border: 2px solid #d1cfcf;
+}
+
+.header-list {
+  display: flex;
+  list-style-type: none
+}
+
+
+.header-style, .bullet-style {
+  font-weight: bold;
+  position: relative;
+  left: -25px;
+}
+
+.bullet-style {
+  padding-left: 20px;
+}
+
+.mat-mdc-icon-button {
+  position: relative;
+  left: 110px;
+}
+
+button.edit-icon {
+  position: relative;
+  left: 120px;
+}
+
+button.edit-color {
+  color: green;
+}

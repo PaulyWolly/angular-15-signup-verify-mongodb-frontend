@@ -1,0 +1,67 @@
+﻿<h1>Accounts</h1>
+<p>All accounts from secure (admin only) api end point. Accounts created here DO NOT need to be email authenticated.</p>
+<a routerLink="add" class="btn btn-sm btn-success mb-2">Create Account</a>
+
+<div style="margin-top:15px;">
+  <ul class="header-list">
+    <li class="header-style" style="width:35%">Name</li>
+    <li class="bullet-style" style="width:36%">Email</li>
+    <li class="bullet-style" style="width:30%">Role</li>
+    <li></li>
+  </ul>
+</div>
+
+<!-- <table>
+<thead>
+  <tr>
+      <th style="width:30%"></th>
+      <th style="width:30%"></th>
+      <th style="width:30%"></th>
+      <th style="width:10%"></th>
+  </tr>
+</thead>
+</table>-->
+<div class="table-scroll">
+  <table class="table table-striped">
+      <!-- <thead>
+          <tr>
+              <th style="width:30%">Name</th>
+              <th style="width:30%">Email</th>
+              <th style="width:30%">Role</th>
+              <th style="width:10%"></th>
+          </tr>
+      </thead> -->
+      <tbody>
+          <tr *ngFor="let account of accounts">
+              <td class="align-middle">{{account.title}} {{account.firstName}} {{account.lastName}}</td>
+              <td class="align-middle">{{account.email}}</td>
+              <td class="align-middle">{{account.role}}</td>
+              <td style="white-space: nowrap">
+                <button
+                  mat-icon-button
+                  class="edit-icon edit-color"
+                  color="primary"
+                  routerLink="edit/{{account.id}}">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button
+                  mat-icon-button
+                  color="warn"
+                  class="delete-icon delete-color"
+                  (click)="onDelete(account.id, account.firstName, account.lastName)"
+                  [disabled]="account.isDeleting"
+                  routerLink="delete/{{account.id}}">
+                  <span *ngIf="account.isDeleting" class="spinner-border spinner-border-sm"></span>
+                  <span *ngIf="!account.isDeleting"><mat-icon>delete</mat-icon></span>
+                </button>
+
+              </td>
+          </tr>
+          <tr *ngIf="!accounts">
+              <td colspan="4" class="text-center">
+                  <span class="spinner-border spinner-border-lg align-center"></span>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
