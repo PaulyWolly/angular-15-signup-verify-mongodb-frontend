@@ -1,6 +1,6 @@
 # angular-15-signup-verification-using-MongoDB (MEAN)
 
-MEAN application for Profile and Roles managment. Email verififcation and profile management, where Roles are "User" and "Admin"
+MEAN application for Profile and Roles managment. Email verififcation and profile management, where Roles are "User" and "Admin".  This is the FRONTEND Angular application hosted on Netlify connecting to the hosted Node/Express/MongoDB web service on Render.com
 
 # Notes
 Need to configure MongoDB through Compasss, then run 'nodemon' in server folder.
