@@ -2,6 +2,7 @@
     <!-- main nav -->
     <nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="account">
         <div class="navbar-nav">
+          <img style="height:40px; width: 40px;" src="../../../assets/img/angular_sm.svg" alt="angular svg">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
             <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
             <a *ngIf="account.role === Role.Admin" routerLink="/admin" routerLinkActive="active" class="nav-item nav-link">Admin</a>
